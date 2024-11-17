@@ -1,0 +1,202 @@
+:root {
+    --dark-color: #181818;
+    --background-color: beige;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Wrapper für die Karten zentrieren */
+#wrapper {
+    display: flex;
+    justify-content: center;
+    /* Horizontale Zentrierung */
+    align-items: flex-start; /* Karten nach oben ausrichten */
+    flex-wrap: wrap;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Wenn eine Kategorie wie "Vögel" ausgewählt ist */
+#wrapper.vögel {
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: flex-start; /* Karten nach oben ausrichten */
+}
+
+/* Header-Box */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+#header-bild {
+    width: 150px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+#header-bild img {
+    width: 100%;
+    height: auto;
+}
+
+#category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-button {
+    background: none;
+    border: none;
+    padding: 1px 5px;
+    height: 20px;
+    margin-top: 30px;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: light;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 1.2;
+}
+
+.category-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.category-button:hover::after {
+    width: 100%;
+}
+
+.category-button.active::after {
+    width: 100%;
+}
+
+/* Suchfeld im Header */
+#search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search {
+    padding: 5px;
+    font-size: 14px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-button {
+    background-color: lightblue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: rgb(65, 153, 182);
+}
+
+.card-number,
+.stat-icon,
+.stat-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-wrapper {
+    padding: .8rem;
+    display: inline-block;
+}
+
+.card-content {
+    display: grid;
+    width: 300px;
+    height: 450px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    background-color: var(--background-color);
+    border-radius: .7rem;
+    border: 2px solid #000;
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+}
+
+.card-number {
+    background-color: lightblue;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.card-title {
+    grid-column: span 3;
+    text-transform: uppercase;
+    padding-left: .5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.card-image {
+    grid-column: span 4;
+    grid-row: span 5;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    justify-self: center;
+    align-self: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-wrapper:hover .card-image {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+.card-trivia {
+    grid-column: span 4;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    background-color: lightblue;
+    padding: 0 0.5rem;
+    border-top: 1px solid var(--dark-color);
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.stat-icon {
+    background-color: lightgray;
+}
+
+.stat-icon img {
+    max-width: 50%;
+    max-height: 50%;
+}
