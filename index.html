@@ -21,22 +21,23 @@
             <div id="header-bild">
                 <img src="images/logo.png" alt="Header Bild">
             </div>
-            <button class="category-button" data-category="Raubtiere">Raubtiere</button>
-            <button class="category-button" data-category="Giftig und infektiös">Giftig und infektiös</button>
-            <button class="category-button" data-category="Reptilien">Reptilien</button>
-            <button class="category-button" data-category="Meeresbewohner">Meeresbewohner</button>
-            <button class="category-button" data-category="Meeresgiganten">Meeresgiganten</button>
-            <button class="category-button" data-category="Großsäuger">Großsäuger</button>
-            <button class="category-button" data-category="Landsäugetiere">Landsäugetiere</button>
-            <button class="category-button" data-category="Vögel">Vögel</button>
-            <button class="category-button" data-category="Alle">Alle</button>
-        </div>
-        <!-- Suchfeld hinzugefügt -->
-        <div class="search-container">
-            <input type="text" id="search" placeholder="Tiername suchen..." oninput="searchAnimal()">
-            <button id="search-button">Suchen</button>
+            <button class="category-button" data-category="Raubtiere" id="raubtiere">Raubtiere</button>
+            <button class="category-button" data-category="Giftig und infektiös" id="giftig">Giftig und infektiös</button>
+            <button class="category-button" data-category="Reptilien" id="reptilien">Reptilien</button>
+            <button class="category-button" data-category="Meeresbewohner" id="meeresbewohner">Meeresbewohner</button>
+            <button class="category-button" data-category="Meeresgiganten" id="meeresgiganten">Meeresgiganten</button>
+            <button class="category-button" data-category="Großsäuger" id="grosssaeuger">Großsäuger</button>
+            <button class="category-button" data-category="Landsäugetiere" id="landsaeugetiere">Landsäugetiere</button>
+            <button class="category-button" data-category="Vögel" id="voegel">Vögel</button>
+            <button class="category-button" data-category="Alle" id="alle">Alle</button>
         </div>
     </header>
+
+    <!-- Suchfeld hinzugefügt mit Abstand zum Header -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Tiername suchen..." oninput="searchAnimal()">
+        <button id="search-button">Suchen</button>
+    </div>
 
     <div id="wrapper">
         <!-- Tiere werden hier angezeigt -->

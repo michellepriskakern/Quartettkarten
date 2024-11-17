@@ -92,6 +92,7 @@
         text-transform: uppercase;
         position: relative;
         line-height: 1.2;
+        margin-left: 100px;
     }
 
 
@@ -196,50 +197,35 @@
     }
 
     /* Suchbox (Search Bar) */
-    .search-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .search-box {
+    #search-container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 90%;
-        max-width: 400px;
-        background-color: #f9f9f9;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        gap: 10px;
     }
-
-    .search-box input[type="text"] {
-        width: 80%;
-        padding: 8px;
+    
+    #search {
+        padding: 5px;
         font-size: 14px;
+        width: 200px;
+        border-radius: 5px;
         border: 1px solid #ccc;
-        border-radius: 4px;
-        outline: none;
+        margin-left: 150px; /* Platz nach links vergrößern, um Buttons rechts zu positionieren */
+        margin-top: 20px; /* Hier kannst du den Abstand anpassen */
+    
+    
     }
-
-    .search-box input[type="text"]:focus {
-        border-color: #000;
-    }
-
-    .search-box button {
-        background-color: #4caf50;
+    
+    #search-button {
+        background-color: lightblue;
         color: white;
         border: none;
-        padding: 8px 12px;
-        border-radius: 4px;
+        padding: 5px 10px;
+        border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
     }
-
-    .search-box button:hover {
-        background-color: #45a049;
+    
+    #search-button:hover {
+        background-color: rgb(65, 153, 182);
     }
 
 
